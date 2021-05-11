@@ -1,0 +1,100 @@
+.text-laranja{ color:#e67349;}
+/* navbar */
+.navbar{
+    background-color: #202020;
+}
+.collapse{
+    justify-content: flex-end;
+
+}
+.nav-link{
+    color:white;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.nav-link:hover{
+    color: rgb(88, 157, 197);
+}
+.active a{
+    border-bottom: 2px dashed #28A045;
+    padding-bottom: 2px;
+    animation: pulse 2s infinite;
+}
+
+
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(44, 204, 124, 0.4);
+      box-shadow: 0 0 0 0 rgba(44, 204, 124, 0.4);
+    }
+    70% {
+        box-shadow: 0 7px 0px rgba(204,169,44, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
+/* navbar fim */
+
+/* header */
+.header{
+    background-image: url(../images/banner1.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+   
+}
+
+.overlay{
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.description{
+    left: 50%;
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    transform: translate(-50%, -55%);
+}
+
+.description h1{
+    color: #e67349;
+}
+
+.description p {
+    color: #fff;
+    line-height: 1.5;
+
+}
+
+
+/* header fim */
+
+/* Serviços */
+.servicos{
+    margin: 4em auto;
+    padding:1em;
+    position: relative;
+}
+
+.servicos h3{
+    color: #e67349;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.servicos img{
+    margin-bottom:20px;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    -moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+
+
+/* Serviços Fim*/
