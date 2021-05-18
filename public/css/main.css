@@ -97,4 +97,27 @@
 }
 
 
+/* Team */
+.bg-team{
+    background-color: #2C3245
+}
+
+.team .card {
+    background-color: #2C3245;
+    color: #131720
+}
+
+.team .card-text{
+    color: #ca7f63;
+}
+
+.team .text-azul{
+    color: #e8e8e8;
+}
+
+hr{
+    border: 3px solid #28A045;
+    width: 100px;
+}
+
 /* Serviços Fim*/
