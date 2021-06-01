@@ -197,6 +197,57 @@
       </div>
     </div>
   </div>
+  <!-- Fim Team -->
+
+  <div class="bg-light pt-5">
+    <div class="container">
+      <h1 class="container text-center">CONTATO</h1>
+      <hr class="mb-5 mt-0">
+      <!-- formulario -->
+      <form action="" method="GET" id="form" onsubmit="cadastrar()">
+
+        <label for="email">E-mail</label>
+        <input class="form-control" type="email" name="email" id="email" placeholder="Digite seu e-mail">
+        <br>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha">
+        <input type="checkbox" onclick="exibeSenha()"> Mostrar
+        <br>
+        
+        <label for="nome">Nome </label><span class="text-danger"> *</span>
+        <input type="text" name="nome" id="nome" required>
+      
+        <input type="date" name="dataNasc" id="">
+
+        <br>
+        <label for="">Sexo</label>
+        <br>
+        <input type="radio" name="sexo" id="masculino" value="masculino" >
+        <label for="">Masculino</label>
+        <br>
+        <input type="radio" name="sexo" id="feminino" value="feminino">
+        <label for="">Feminino</label>
+        <br>
+        <input type="radio" name="sexo" id="outros" value="outros">
+        <label for="">Outros</label>
+        <br>
+      
+        <label for="">UF</label>
+        <select name="uf" id="uf">
+          <option value="SP">SP</option>
+          <option value="MG">MG</option>
+          <option value="RJ">RJ</option>
+          <option value="TO">TO</option>
+        </select>
+
+        <button class="btn btn-primary">Cadastrar</button>
+      </form>
+
+      <div class="msg"></div>
+
+      <div style="min-height: 300px;"></div>
+    </div>
+  </div>
 
 
 
@@ -210,6 +261,44 @@
     $(document).ready(function () {
       $('.header').height($(window).height())
     });
+
+    function exibeSenha()
+    {
+      var senha = document.getElementById("senha");
+
+      if(senha.type === 'password')
+      {
+        senha.type = 'text'
+        return
+      }
+        senha.type = 'password'
+
+    }
+
+    function cadastrar()
+    {
+      event.preventDefault()
+      var form = document.getElementById("form")
+      var nome = form.nome.value;
+      var email = form.email.value;
+      var sexo = form.sexo.value;
+      //exibir os valores logo abaixo do FORMULARIO na classe msg
+      var conteudo = `<div class="alert alert-success alert-dismissible fade show" role="alert"> 
+                        CADASTRADO REALIZADO COM SUCESSO.<br>
+                        Confira seus dados: <br>
+                        ------------------------------- <br>
+                        Nome: ${nome} <br>
+                        E-Mail: ${email} <br>
+                        Sexo: ${sexo} <br>
+                        ------------------------------- <br>
+
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>`
+      document.querySelector(".msg").innerHTML = conteudo
+    }
+
   </script>
   <!-- fim scripts -->
 </body>
